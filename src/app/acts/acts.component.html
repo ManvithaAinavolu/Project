@@ -1,0 +1,131 @@
+<body>
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+      
+       
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+          <!-- <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+            <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+          </ul> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="#"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">{{username}}</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a routerLink="/signup" class="dropdown-item">SIGN UP</a></li>
+        <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+        <li><a routerLink="#" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acts">
+    <div class="mc">
+      <div class="container">
+        <div class="dv">
+          <img src="https://i1.wp.com/vidhi.org/wp-content/uploads/2020/06/Domestic-violence.jpg?fit=810%2C455&ssl=1" alt="Domesitic Violence">
+          <h1><a routerLink="/dv" routerLinkActive="active">Domestic Violence</a></h1>
+        </div>
+        
+        <div class="dowry">
+          <img src="https://th.bing.com/th/id/OIP.uxlYUlaL0SV2cpciRExw_QHaD1?pid=ImgDet&rs=1" alt="Dowry">
+          <h1><a routerLink="/dowry" routerLinkActive="active">Dowry Demanding</a></h1>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="acid">
+          <img src="https://s3-ap-south-1.amazonaws.com/adda247jobs-wp-assets-adda247/articles/wp-content/uploads/2022/12/17220326/Law-On-Acid-Attacks-1.jpg" alt="Acid">
+          <h1><a routerLink="/acid" routerLinkActive="active">Acid Attack</a></h1>
+        </div>
+        <div class="sh">
+          <img src="https://4.bp.blogspot.com/-Vk3p1l7o230/XaHI12Zz5CI/AAAAAAAABDQ/GgSejQj0uWwJVCFjYb00LhsH3B7GgNDSwCLcBGAsYHQ/s1600/Sexual%2BHarassment%2BAssault%2BSilhouette%2B%25282%2529.jpg" alt="Sexual harassment">
+          <h1><a routerLink="/sh" routerLinkActive="active">Sexual Harassment</a></h1>
+        </div>
+      </div>
+      <!-- <div class="container2">
+        <div class="acid">
+          <img src="data:image/jpeg;base64,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" alt="Acid">
+          <h1><a routerLink="/acid" routerLinkActive="active">Gender-Based Violence</a></h1>
+        </div>
+        <div class="sh">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2USWdZJtuGvCg4yf9lPZgnjmlMv0cwKQvpQ&usqp=CAU" alt="Sexual harassment">
+          <h1><a routerLink="/sh" routerLinkActive="active">Widowhood related violence</a></h1>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="statistics">
+    <div class="statistics-item">
+      <h1 style="font-weight:bold">Crime rate against women India 2015-2019 </h1>
+      <div>
+       
+        <canvas id="crime-rate-bar-chart" width="600" height="400"></canvas>
+        <p class="para-container">
+      In 2019, nearly 62 out of every 100 thousand women in India were victims of a crime. 
+      In comparison to the last year's figures, a rise in the crime rate was observed.
+       Several psychological and patriarchal factors can result in an escalation of crime against women.
+    </p>
+  </div>
+      
+    </div>
+    <div class="statistics-item">
+      <h1 style="font-weight: bold;">Literacy Rate of Women In India</h1>
+      <div>
+        <canvas id="pieChart" width="400" height="300"></canvas>
+      </div>
+      
+    </div>
+    <!-- Add more statistics items as needed -->
+  </div>
+
+  <!-- Dowry Demanding Container -->
+  <div class="container">
+    <div class="dowry">
+     <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">"Violence against women isn't cultural, it's criminal. Equality cannot come eventually, it's something we must fight for now."
+      -Samantha Power </p>
+    </div>
+  </div>
+  <div class="asking" >
+    <h2 style="font-size: 50px;">Do you know more acts?</h2>
+    <h2><a routerLink="/form" style="font-size: 50px;color:brown">Knowledge Awaits</a></h2>
+    <h2><a routerLink="/table" style="font-size: 50px;color: black;">Explore the Data Table Now</a></h2>
+  </div>
+
+</body>
